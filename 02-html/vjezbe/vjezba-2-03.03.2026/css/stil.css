@@ -1,0 +1,290 @@
+/* =============================================
+   HR: Vanjska CSS datoteka - stilovi su odvojeni od HTML-a
+       Prednost: jedan CSS fajl za sve stranice, lakše održavanje
+   EN: External CSS file - styles are separated from HTML
+       Benefit: one CSS file for all pages, easier maintenance
+   ============================================= */
+
+/* HR: Osnovni stilovi za cijelu stranicu
+   EN: Base styles for the whole page */
+body{
+    font-family: Arial, Helvetica, sans-serif; 
+    margin: 0; 
+    background-color: #f4f4f4;
+}
+
+header{
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* HR: h1 je zakomentiran - više se ne koristi direktno, stilizira se drugačije
+   EN: h1 is commented out - no longer used directly, styled differently */
+/*
+h1{
+    font-size: 20px;
+    text-decoration: underline;
+    color: #e5eb9d;
+}
+*/
+
+h2{
+    font-size: 20px;
+    color: #34495e;
+    text-decoration: underline;
+    /* HR: Razmak između teksta i linije podcrtavanja
+       EN: Space between text and underline */
+    text-underline-offset: 3px;
+}
+
+/* HR: Navigacijska traka
+   EN: Navigation bar */
+nav{
+    background-color: #34495e;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover{
+    color: #ED9785;
+}
+
+/* HR: Klasa za aktivnu stranicu u navigaciji
+   EN: Class for active page in navigation */
+.active{
+    color: red;
+}
+
+main{
+    padding: 20px;
+}
+
+/* =============================================
+   KATEGORIJE LISTA
+   ============================================= */
+
+/* HR: Custom stilizirana lista bez točkica
+   EN: Custom styled list without bullets */
+.kategorije-lista{
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.kategorije-lista li{
+    background-color: white;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 20%;
+}
+
+/* HR: display:block čini cijeli <li> klikabilnim, ne samo tekst
+   EN: display:block makes the entire <li> clickable, not just the text */
+.kategorije-lista li a{
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.kategorije-lista li a:hover{
+    background-color: #f39c12;
+    color: white;
+}
+
+/* =============================================
+   OPISNA LISTA - stilizacija po ID-u (#opis-lista)
+   HR: ID selektor (#) - jedinstven element na stranici
+   EN: ID selector (#) - unique element on the page
+   ============================================= */
+#opis-lista{
+    background-color: white;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+#opis-lista dt{
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 15px;
+    color: #2c3e50;
+}
+
+#opis-lista dd{
+    margin-left: 20px;
+    margin-bottom: 10px;
+    color: #d76a27;
+    margin-top: 5px;
+}
+
+/* =============================================
+   TABLICA
+   ============================================= */
+
+/* HR: border-collapse:collapse - spaja granice ćelija u jednu liniju
+   EN: border-collapse:collapse - merges cell borders into one line */
+table{
+    width: 50%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td{
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+th{
+    background-color: #34495e;
+    color: white;
+}
+
+.sredina{
+    text-align: center;
+}
+
+.valuta{
+    text-align: right;
+}
+
+.zbroj{
+    background-color: #f39c12;
+}
+
+/* HR: Link stiliziran kao gumb
+   EN: Link styled as a button */
+.gumb{
+    background-color: #34495e;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+/* =============================================
+   FORME
+   ============================================= */
+
+form{
+    background: white;
+    padding: 25px;
+    border-radius: 6px;
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+/* HR: display:block - label zauzima cijeli red
+   EN: display:block - label takes up the full row */
+form label{
+    font-weight: bold;
+    display: block;
+}
+
+/* HR: width:100% - input zauzima punu širinu forme
+       box-sizing:border-box - padding se uračunava u širinu
+   EN: width:100% - input takes full form width
+       box-sizing:border-box - padding is included in width */
+form input,
+form select,
+form textarea{
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form button{
+    background-color: #34495e;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover{
+    background-color: #f39c12;
+}
+
+/* =============================================
+   KONTAKT LAYOUT - Flexbox
+   HR: display:flex - elementi se postavljaju jedan pored drugog
+       flex:1 i flex:2 - omjer veličine (forma:mapa = 1:2)
+   EN: display:flex - elements placed side by side
+       flex:1 and flex:2 - size ratio (form:map = 1:2)
+   ============================================= */
+.kontakt-container{
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.kontakt-forma{
+    flex: 1;
+}
+
+.kontakt-mapa{
+    flex: 2;
+    background: white;
+    padding: 10px;
+    border-radius: 6px;
+    min-height: 400px;
+}
+
+img{
+    border: 1px solid #555;
+    background: white;
+    padding: 5px;
+}
+
+footer{
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* =============================================
+   RESPONZIVNI DIZAJN - Media Queries
+   HR: @media - CSS pravila koja se primjenjuju samo na određenim veličinama ekrana
+       max-width:768px = tableti i mobiteli
+   EN: @media - CSS rules applied only at certain screen sizes
+       max-width:768px = tablets and mobile devices
+   ============================================= */
+@media (max-width: 768px){
+    /* HR: Na malim ekranima navigacija ide vertikalno
+       EN: On small screens navigation goes vertical */
+    nav{
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav a{
+        margin: 10px 0;
+    }
+
+    /* HR: Na malim ekranima kontakt forma i mapa idu jedna ispod druge
+       EN: On small screens contact form and map stack vertically */
+    .kontakt-container{
+        flex-direction: column;
+    }
+
+    .kontakt-mapa{
+        min-height: 150px;
+    }
+}

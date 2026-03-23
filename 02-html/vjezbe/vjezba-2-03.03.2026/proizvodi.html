@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WebShop - proizvodi</title>
+        <link rel="stylesheet" href="css/stil.css">
+    </head>
+    <body>
+        <header>
+            <h1>WebShop</h1>
+            <p>Dobro došli na našu web trgovinu</p>
+        </header>
+
+        <nav>
+            <a href="index.html">Početna</a>
+            <a href="kategorije.html">Kategorije</a>
+            <a href="opisnekategorije.html">Opisne kategorije</a>
+            <a href="proizvodi.html" class="active">Proizvodi</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+
+        <main>
+            <h2>Popis proizvoda</h2>
+
+            <!-- HR: HTML tablica s thead (zaglavlje), tbody (tijelo) i tfoot (podnožje)
+                      border-collapse u CSS-u spaja granice ćelija u jednu liniju
+                 EN: HTML table with thead (header), tbody (body) and tfoot (footer)
+                      border-collapse in CSS merges cell borders into one line -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Naziv</th>
+                        <th>Kategorija</th>
+                        <th>Količina</th>
+                        <th>Cijena</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <!-- HR: class="sredina" i class="valuta" su CSS klase za poravnanje teksta
+                             EN: class="sredina" and class="valuta" are CSS classes for text alignment -->
+                        <td>Laptop</td>
+                        <td>Elektronika</td>
+                        <td class="sredina">50</td>
+                        <td class="valuta">1.200,00 €</td>
+                    </tr>
+                    <tr>
+                        <td>Majica</td>
+                        <td>Odjeća</td>
+                        <td class="sredina">170</td>
+                        <td class="valuta">25,00 €</td>
+                    </tr>
+                </tbody>
+                <!-- HR: tfoot - podnožje tablice, colspan="3" spaja 3 ćelije u jednu
+                     EN: tfoot - table footer, colspan="3" merges 3 cells into one -->
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="zbroj">Ukupno:</td>
+                        <td class="valuta zbroj">1.225,00 €</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <!-- HR: Link stiliziran kao gumb pomoću CSS klase "gumb"
+                 EN: Link styled as a button using CSS class "gumb" -->
+            <p>
+                <a href="unosproizvoda.html" class="gumb">Dodaj novi proizvod</a>
+            </p>
+        </main>
+
+        <footer>
+            Copyright &copy; 2026 WebShop | Sva prava pridržana
+        </footer>
+    </body>
+</html>
